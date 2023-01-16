@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginModule } from './authentication';
+import { LoginModule, LoginRoutingModule } from './authentication';
 
 @NgModule({
   declarations: [
@@ -16,6 +16,7 @@ import { LoginModule } from './authentication';
     BrowserAnimationsModule,
     MatButtonModule,
     LoginModule,
+    LoginRoutingModule,
 
     AppRoutingModule
   ],
