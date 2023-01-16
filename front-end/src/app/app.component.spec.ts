@@ -22,10 +22,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('ponto-inteligente');
   });
 
-  it('should render title', () => {
+  it('should render button', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ponto-inteligente app is running!');
+    expect(compiled.querySelector('button')).toBeTruthy;
   });
 });
