@@ -6,17 +6,16 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-
   public form!: FormGroup;
 
-  constructor (
+  constructor(
     private fb: FormBuilder,
     private snackBar: MatSnackBar,
     private router: Router
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.generateForm();
@@ -29,4 +28,11 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  public login(): void {
+    if (this.form.invalid) {
+      this.snackBar.open('Dados inválidos', 'Erro', { duration: 5000 });
+      return;
+    }
+    alert(JSON.stringify(this.form.value));
+  }
 }
