@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
+import { Login } from '../../models';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -33,6 +35,7 @@ export class LoginComponent implements OnInit {
       this.snackBar.open('Dados inválidos', 'Erro', { duration: 5000 });
       return;
     }
-    alert(JSON.stringify(this.form.value));
+    const login: Login = this.form.value;
+    alert(JSON.stringify(login));
   }
 }
