@@ -11,6 +11,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
 
 import { LogarComponent, LoginComponent } from './components';
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,9 @@ import { LogarComponent, LoginComponent } from './components';
     MatTooltipModule,
     MatIconModule,
     MatSnackBarModule
+  ],
+  providers: [
+    LoginService
   ]
 })
 export class LoginModule { }
