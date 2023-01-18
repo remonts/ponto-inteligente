@@ -1,15 +1,16 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SignupPjComponent } from './components/signup-pj/signup-pj.component';
-
-
+import { SignupPjComponent, SignUpPjRouterComponent } from './components';
 
 @NgModule({
   declarations: [
-    SignupPjComponent
+    SignupPjComponent,
+    SignUpPjRouterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class SignupPjModule { }
